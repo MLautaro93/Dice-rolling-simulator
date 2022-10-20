@@ -7,6 +7,7 @@ root = tk.Tk()
 root.geometry('512x384')
 root.title('Dice Rolling Simulator')
 root.config(bg = 'light blue')
+root.resizable(False, False)
 
 # Adding a header
 header = tk.Label(text = 'Roll the dice!', font = 'arial 15 bold', bg = 'light blue')
