@@ -1,9 +1,8 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-from winsound import PlaySound, SND_FILENAME
 import random
 
-# Creting the window
+# Creating the window
 root = tk.Tk()
 root.geometry('512x384')
 root.title('Dice Rolling Simulator')
@@ -17,15 +16,12 @@ header.place(relx = 0.5, y = 50, anchor = tk.CENTER)
 dice = ['die_1.png', 'die_2.png', 'die_3.png', 'die_4.png', 'die_5.png', 'die_6.png']
 
 # Function activated by the play button
-def roll_dice():
-    
+def roll_dice():    
     image = Image.open(random.choice(dice)).resize((128, 128))
     img = ImageTk.PhotoImage(image)
     label = tk.Label(image = img)
     label.place(relx = .5, y = 175, anchor = tk.CENTER)
     label.image = img
-
-    PlaySound('rollingdice.wav', SND_FILENAME)
 
 # Function to exit the game
 def exit():
